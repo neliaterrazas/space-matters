@@ -1,26 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import styled from 'styled-components';
+
+import ThemeChanger from './ThemeChanger';
+import { ThemeProvider } from '@callstack/react-theme-provider';
+import { themes } from './themes';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      theme: themes.normal
+    };
+    //
+    // handleThemeChange = (themeName: string) => {
+    //   this.setState({ theme: themes[themeName] });
+    // };
+
+  }
+  render(){
+      return (
+        <div>
+          <ThemeProvider theme={this.state.theme}>
+          
+              <ThemeChanger
+                onChangeTheme={this.handleThemeChange}
+                themes={Object.keys(themes)}
+              />
+          </ThemeProvider>
+        </div>
+        );
+      }
+    }
 
 export default App;
