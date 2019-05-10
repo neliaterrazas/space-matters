@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import seventieslogo ''
 
 const SlideOver = styled.div`
   height: 100%;
@@ -12,8 +13,10 @@ const SlideOver = styled.div`
 function Seventies(){
   return(
     <div>
-      
+      <Header/>
+      <div>
 
+      </div>
 
     </div>
 
