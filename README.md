@@ -26,7 +26,7 @@ _Purpose: Survey Site Designed to Display Derrick McDonald's Work for Space Matt
 * 1PM-2PM: Begin Firebase code set up in 2nd repo
 * 2PM-3PM: Add unique key set up.
 * 3PM-4PM: Firebase set up and continue passing props in Header and 70s theme path.
-* 4PM-5PM:
+* 4PM-5PM: Wrap up moving components to get rid of terminal errors and display on web browser.
 
 _I added this more detailed README from the original "capstone proposal" repo, this is current repo was created today to start building with code_
 _Last week's submitted repo_
