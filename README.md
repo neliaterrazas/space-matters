@@ -28,8 +28,9 @@ _Purpose: Survey Site Designed to Display Derrick McDonald's Work for Space Matt
 * 3PM-4PM: Firebase set up and continue passing props in Header and 70s theme path.
 * 4PM-5PM:
 
-_Here is my other repo with all the code that I am testing out_
-* https://github.com/neliaterrazas/space-matters.git
+_I added this more detailed README from the original "capstone proposal" repo, this is current repo was created today to start building with code_
+_Last week's submitted repo_
+* https://github.com/neliaterrazas/capstone-planning.git
 
 
 ##### Minimum Viable Product Requirements:
