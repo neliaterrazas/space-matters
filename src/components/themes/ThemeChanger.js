@@ -1,20 +1,7 @@
 import React from "react";
-@import "~react-vis/dist/style";
+import "~react-vis/dist/style";
 import styled from "styled-components";
-import { withTheme } from "@callstack/react-theme-provider";
 
-// const Header = ({ theme, themes, onChangeTheme }) => (
-//   <Container textColor={theme.primaryColor} background={theme.secondaryColor}>
-//     CHANGE THEME:{" "}
-//     <select onChange={e => onChangeTheme(e.target.value)}>
-//       {themes.map(themeName => (
-//         <option key={themeName} value={themeName}>
-//           {themeName}
-//         </option>
-//       ))}
-//     </select>
-//   </Container>
-// );
 
 const Container = styled.div`
   box-sizing: border-box;

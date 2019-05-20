@@ -33,7 +33,11 @@ _Last week's submitted repo_
 * https://github.com/neliaterrazas/capstone-planning.git
 
 ######5/20/19
-Today has been almost absolute debug and research day, once again. I have a lot more hours to put into this and will definitely be making other repos to practice both graphing data and firebase. 
+Today has been almost absolute debug and research day, once again. I have a lot more hours to put into this and will definitely be making other repos to practice both graphing data and firebase.
+_Personal notes for tomorrow-- things to do:_
+* Sketch work for kawaii, 70s, and tropical. (LOGOS)
+* Authentication for Google. 
+* Sunburst displayed.
 
 ##### Minimum Viable Product Requirements:
 * Sign in/sign out. Google Authentication.
