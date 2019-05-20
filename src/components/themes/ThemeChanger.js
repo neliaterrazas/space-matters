@@ -1,4 +1,5 @@
 import React from "react";
+@import "~react-vis/dist/style";
 import styled from "styled-components";
 import { withTheme } from "@callstack/react-theme-provider";
 
