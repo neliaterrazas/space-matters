@@ -32,6 +32,8 @@ _I added this more detailed README from the original "capstone proposal" repo, t
 _Last week's submitted repo_
 * https://github.com/neliaterrazas/capstone-planning.git
 
+######5/20/19
+Today has been almost absolute debug and research day, once again. I have a lot more hours to put into this and will definitely be making other repos to practice both graphing data and firebase. 
 
 ##### Minimum Viable Product Requirements:
 * Sign in/sign out. Google Authentication.
