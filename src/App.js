@@ -1,29 +1,36 @@
 import React from 'react';
-import 
-
+import Navbar from './components/firebase/Navbar';
+import Dashboard from './components/Dashboard';
+import EventDetails from './components/EventDetails';
+import CreateEvent from './components/admin/CreateEvent'
+import SignIn from './components/firebase/SignIn';
+import SignUp from './components/firebase/SignUp';
+import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
-
-
-import './App.css';
 
 class App extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-
     };
-    //
-    // handleThemeChange = (themeName: string) => {
-    //   this.setState({ theme: themes[themeName] });
-    // };
 
   }
   render(){
       return (
-        <div>
-        </div>
+        <BrowserRouter>
+          <div>
+            <Navbar/>
+              <Switch>
+                <Route exact path='/' component={Dashboard}/>
+                <Route path='/project/:id' component={EventDetails}/>
+                <Route path='/signin' component={SignIn}/>
+                <Route path='/signup' component={SignUp}/>
+                <Route path='/create' component={CreateEvent}/>
+              </Switch>
+          </div>
+        </BrowserRouter>
         );
       }
     }
