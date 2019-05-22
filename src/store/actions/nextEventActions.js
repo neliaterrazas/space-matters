@@ -1,7 +1,7 @@
 export const createNextEvent = (nextEvent) => {
-  return (dispatch, getState, {getFirebase, getFirestore}) => {
+  return (dispatch, getState, { getFirebase, getFirestore }) => {
 
-    dispatch({ type: 'CREATE_NEXTEVENT', nextEvent});
+    dispatch({ type: 'CREATE_NEXTEVENT', nextEvent });
 
   }
 };
