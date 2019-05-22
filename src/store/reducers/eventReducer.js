@@ -9,7 +9,13 @@ const initState = {
 const eventReducer = (state = initState, action) => {
   switch (action.type) {
     case 'CREATE_NEXTEVENT':
-    console.log('created event', action.nextEvent)
+      console.log('created event', action.nextEvent);
+    return state;
+    case 'CREATE_NEXTEVENT_ERROR':
+      console.log('create project error', action.err);
+      return state;
+
+
   }
   return state;
 }
