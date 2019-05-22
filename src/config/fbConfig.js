@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 
 
-var firebaseConfig = {
+var config = {
   apiKey: "AIzaSyAURN_JxuJGb54Y1YPHYcJQRUibSRU0UxA",
   authDomain: "space-matters.firebaseapp.com",
   databaseURL: "https://space-matters.firebaseio.com",
@@ -12,8 +12,8 @@ var firebaseConfig = {
   messagingSenderId: "1035578766163",
   appId: "1:1035578766163:web:7e372da016e68fea"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
+firebase.initializeApp(config);
 firebase.firestore().settings({ timestampsInSnapshots: true});
 
 export default firebase;

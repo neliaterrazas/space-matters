@@ -1,14 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import EventSummary from './EventSummary';
-
+import { Link } from 'react-router-dom';
 
 const EventList = ({nextEvents}) => {
   return(
     <div className="event-list section">
       { nextEvents && nextEvents.map(nextEvent => {
         return(
-          <EventSummary nextEvent={nextEvent} key={nextEvent.id} />
+          <Link to={'/project/' + nextEvent.id} key={nextEvent.id}>
+            <EventSummary nextEvent={nextEvent}  />
+          </Link>
         )
       })}
     </div>
