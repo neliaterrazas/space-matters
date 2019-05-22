@@ -4,4 +4,4 @@ export const createNextEvent = (nextEvent) => {
     dispatch({ type: 'CREATE_NEXTEVENT', nextEvent});
 
   }
-}
+};
