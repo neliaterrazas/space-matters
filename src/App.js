@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/firebase/Navbar';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/admin/Dashboard';
 import EventDetails from './components/EventDetails';
 import CreateEvent from './components/admin/CreateEvent'
 import SignIn from './components/firebase/SignIn';

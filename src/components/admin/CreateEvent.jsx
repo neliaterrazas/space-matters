@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { createNextEvent } from '../../store/actions/nextEventActions';
 
 class CreateEvent extends React.Component{
   state = {
@@ -14,7 +16,8 @@ class CreateEvent extends React.Component{
 
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(this.state);
+    // console.log(this.state);
+    this.props.createNextEvent(this.state)
   }
 
   render(){
@@ -40,5 +43,10 @@ class CreateEvent extends React.Component{
     );
   }
 }
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createNextEvent: (nextEvent) => dispatch(createNextEvent(nextEvent))
+  }
+}
 
-export default CreateEvent;
+export default connect(null, mapDispatchToProps)(CreateEvent);
