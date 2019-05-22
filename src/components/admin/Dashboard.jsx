@@ -1,14 +1,14 @@
 import React from 'react';
 import Notifications from '../Notifications';
 import EventList from '../EventList';
-
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 class Dashboard extends React.Component{
   render(){
-    const { nextEvents } = this.props;
+    const { nextEvents, auth } = this.props;
+
     return(
       <div className="dashboard container">
         <div className="row">
@@ -26,7 +26,8 @@ class Dashboard extends React.Component{
 const mapStateToProps = (state) => {
   console.log(state);
   return {
-    nextEvents: state.firestore.ordered.nextEvents
+    nextEvents: state.firestore.ordered.nextEvents,
+    auth: state.firebase.auth
   }
 }
 export default compose(
