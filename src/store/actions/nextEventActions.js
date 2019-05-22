@@ -10,7 +10,7 @@ export const createNextEvent = (nextEvent) => {
     }).then(() => {
       dispatch({ type: 'CREATE_NEXTEVENT', nextEvent });
     }).catch((err) => {
-      dispatch({ type: 'CREATE_NEXTEVENT', err });
+      dispatch({ type: 'CREATE_NEXTEVENT_ERROR', err });
     })
   }
 };
