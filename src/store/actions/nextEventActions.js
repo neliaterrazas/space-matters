@@ -1,16 +1,18 @@
 export const createNextEvent = (nextEvent) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firestore = getFirestore();
-    firestore.collection('nextEvents').add({
-      ...nextEvent,
-      authorFirstName: 'x',
-      authorLastName: 'aquel dia te vi',
-      authorId: 1234,
-      createdAt: new Date()
-    }).then(() => {
-      dispatch({ type: 'CREATE_NEXTEVENT', nextEvent });
-    }).catch((err) => {
-      dispatch({ type: 'CREATE_NEXTEVENT_ERROR', err });
-    })
-  }
-};
+  return (dispatch, getState, {getFirestore}) => {
+      const firestore = getFirestore();
+      const profile = getState().firebase.profile;
+      const authorId = getState().firebase.auth.uid;
+      firestore.collection('nextEvents').add({
+        ...nextEvent,
+        authorFirstName: profile.firstName,
+        authorLastName: profile.lastName,
+        authorId: authorId,
+        createdAt: new Date()
+      }).then(() => {
+        dispatch({ type: 'CREATE_PROJECT_SUCCESS' });
+      }).catch(err => {
+        dispatch({ type: 'CREATE_PROJECT_ERROR' }, err);
+      });
+    }
+  };

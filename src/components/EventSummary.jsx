@@ -7,7 +7,7 @@ const EventSummary = ({nextEvent}) => {
       <div className="card-content grey-text text-darken-3">
         <span className="card-title">{nextEvent.title}</span>
 
-        <p>Posted by NTF</p>
+        <p>Posted by {nextEvent.authorFirstName} {nextEvent.authorLastName}</p>
         <p className="grey-text">May 20, 2019</p>
       </div>
     </div>
