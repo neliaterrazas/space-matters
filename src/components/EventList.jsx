@@ -7,8 +7,8 @@ const EventList = ({nextEvents}) => {
     <div className="event-list section">
       { nextEvents && nextEvents.map(nextEvent => {
         return(
-          <Link to={'/project/' + nextEvent.id}>
-            <EventSummary nextEvent={nextEvent} key={nextEvent.id} />
+          <Link to={'/project/' + nextEvent.id} key={nextEvent.id}>
+            <EventSummary nextEvent={nextEvent}  />
           </Link>
         )
       })}

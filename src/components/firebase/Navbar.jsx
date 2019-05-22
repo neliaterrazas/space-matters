@@ -2,8 +2,9 @@ import React from 'react';
 import SignedInLinks from './SignedInLinks';
 import SignedOutLinks from './SignedOutLinks';
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
 
-class Header extends React.Component{
+class Navbar extends React.Component{
   constructor(props){
     super(props);
     this.state={
@@ -22,6 +23,11 @@ class Header extends React.Component{
       );
     }
 }
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {
 
+  }
+}
 
-export default Header;
+export default connect(mapStateToProps)(Navbar);
