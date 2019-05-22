@@ -14,10 +14,10 @@ const eventReducer = (state = initState, action) => {
     case 'CREATE_NEXTEVENT_ERROR':
       console.log('create project error', action.err);
       return state;
-
-
+    default:
+    return state;
   }
-  return state;
+
 }
 
 export default eventReducer;
