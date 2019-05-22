@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function EventSummary(){
+const NextEventSummary = ({nextEvent}) => {
   return(
     <div className="card z-depth-0 event-summary">
       <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
+        <span className="card-title">{nextEvent.title}</span>
         <p>Posted by NTF</p>
         <p className="grey-text">May 20, 2019</p>
       </div>
@@ -13,4 +13,4 @@ function EventSummary(){
   )
 };
 
-export default EventSummary;
+export default NextEventSummary;

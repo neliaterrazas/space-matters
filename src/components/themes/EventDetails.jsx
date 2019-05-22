@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function EventDetails(props){
+function NextEventDetails(props){
   const id = props.match.params.id;
   return(
     <div className="container section event-details">
@@ -18,4 +18,4 @@ function EventDetails(props){
     </div>
   )
 }
-export default EventDetails;
+export default NextEventDetails;

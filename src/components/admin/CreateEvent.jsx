@@ -1,6 +1,6 @@
 import React from 'react';
 
-class CreateEvent extends React.Component{
+class CreateNextEvent extends React.Component{
   state = {
     title: '',
     content: ''
@@ -41,4 +41,4 @@ class CreateEvent extends React.Component{
   }
 }
 
-export default CreateEvent;
+export default CreateNextEvent;

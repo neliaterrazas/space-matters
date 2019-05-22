@@ -1,12 +1,13 @@
 import React from 'react';
 import Navbar from './components/firebase/Navbar';
-import Dashboard from './components/Dashboard';
-import EventDetails from './components/EventDetails';
+import Dashboard from './components/themes/Dashboard';
+import EventDetails from './components/themes/EventDetails';
 import CreateEvent from './components/admin/CreateEvent'
 import SignIn from './components/firebase/SignIn';
 import SignUp from './components/firebase/SignUp';
 import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
+
 
 
 class App extends React.Component {
