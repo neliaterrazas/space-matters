@@ -5,8 +5,8 @@ import EventDetails from './components/EventDetails';
 import CreateEvent from './components/admin/CreateEvent'
 import SignIn from './components/firebase/SignIn';
 import SignUp from './components/firebase/SignUp';
-import { BrowserRouter, Switch, Route, withRouter } from 'react-router-dom';
-import styled from 'styled-components';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
 
 
 class App extends React.Component {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 
 function EventDetails(props){
   const id = props.match.params.id;
