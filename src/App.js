@@ -7,6 +7,9 @@ import SignIn from './components/firebase/SignIn';
 import SignUp from './components/firebase/SignUp';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Seventies from './components/themes/Seventies';
+import Tropical from './components/themes/Tropical';
+import Sterile from './components/themes/Sterile';
+
 
 
 
@@ -29,10 +32,13 @@ class App extends React.Component {
                 <Route path='/signin' component={SignIn}/>
                 <Route path='/signup' component={SignUp}/>
                 <Route path='/create' component={CreateEvent}/>
-                <Route path='/seventies' component={Seventies}/>
+                <Route path='/uno' component={Seventies}/>
+                <Route path='/dos' component={Tropical}/>
+                <Route path='/tres' component={Sterile}/>
+
               </Switch>
           </div>
-          
+
         </BrowserRouter>
         );
       }
