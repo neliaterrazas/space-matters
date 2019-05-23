@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './components/firebase/Navbar';
+import Footer from './components/firebase/Footer';
 import Dashboard from './components/admin/Dashboard';
 import EventDetails from './components/EventDetails';
 import CreateEvent from './components/admin/CreateEvent'
@@ -27,16 +28,17 @@ class App extends React.Component {
           <div>
             <Navbar/>
               <Switch>
-                <Route exact path='/' component={Dashboard}/>
+                <Route exact path='/' component={Seventies}/>
                 <Route path='/project/:id' component={EventDetails}/>
                 <Route path='/signin' component={SignIn}/>
                 <Route path='/signup' component={SignUp}/>
                 <Route path='/create' component={CreateEvent}/>
-                <Route path='/uno' component={Seventies}/>
+
                 <Route path='/dos' component={Tropical}/>
                 <Route path='/tres' component={Sterile}/>
 
               </Switch>
+              <Footer/>
           </div>
 
         </BrowserRouter>

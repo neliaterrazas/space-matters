@@ -4,7 +4,17 @@ import { Link } from 'react-router-dom';
 
 const EventList = ({nextEvents}) => {
   return(
-    <div className="event-list section">
+    <div className="sectioncenter">
+      <style jsx>{`
+        .section {
+          margin-top: 5em;
+        }
+
+          `}</style>
+
+          <h3 className="center">Future Events: </h3>
+
+
       { nextEvents && nextEvents.map(nextEvent => {
         return(
           <Link to={'/project/' + nextEvent.id} key={nextEvent.id}>
@@ -12,6 +22,7 @@ const EventList = ({nextEvents}) => {
           </Link>
         )
       })}
+
     </div>
   )
 };
