@@ -6,6 +6,7 @@ import CreateEvent from './components/admin/CreateEvent'
 import SignIn from './components/firebase/SignIn';
 import SignUp from './components/firebase/SignUp';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Seventies from './components/themes/Seventies';
 
 
 
@@ -28,8 +29,10 @@ class App extends React.Component {
                 <Route path='/signin' component={SignIn}/>
                 <Route path='/signup' component={SignUp}/>
                 <Route path='/create' component={CreateEvent}/>
+                <Route path='/seventies' component={Seventies}/>
               </Switch>
           </div>
+          
         </BrowserRouter>
         );
       }

@@ -1,21 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import seventieslogo ''
 
-const SlideOver = styled.div`
-  height: 100%;
-  width: 100%;
-  background:
-`;
+
 
 
 function Seventies(){
   return(
     <div>
-      <Header/>
-      <div>
+      <style jsx>{`
+          @font-face {
+            font-family: Prisma;
+            src: url(/Users/Guest/desktop/space-matters/src/assets/Prisma.ttf);
+          }
+          h1 {
+            font-family: Prisma;
+            font-size: 10em;
+          }
+          .space{
+            color: green;
+            background-color: #E0AD14;
+            height: 40vh;
+            border: 1em solid #67330B;
+            
+          }
+          `}</style>
 
+        <div className="container">
+          <div className="space valign-wrapper ">
+            <h1 className="center">SPACE MATTERS</h1>
+          </div>
       </div>
 
     </div>
