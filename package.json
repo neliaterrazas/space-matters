@@ -18,7 +18,8 @@
     "redux": "^3.7.2",
     "redux-firestore": "^0.8.0",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "victory": "^32.2.3"
   },
   "scripts": {
     "start": "react-scripts start",

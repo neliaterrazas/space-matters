@@ -9,6 +9,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Seventies from './components/themes/Seventies';
 import Tropical from './components/themes/Tropical';
 import Sterile from './components/themes/Sterile';
+import PieChart from './components/react-vis/PieChart';
+import * as V from 'victory';
 
 
 
@@ -37,6 +39,7 @@ class App extends React.Component {
                 <Route path='/tres' component={Sterile}/>
 
               </Switch>
+              <PieChart/>
           </div>
 
         </BrowserRouter>
