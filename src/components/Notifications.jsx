@@ -6,6 +6,7 @@ function Notifications(){
       <style jsx>{`
           .graphs{
             border: 1em solid #9A3B2F;
+            margin-top: 7em;
           }
           `}</style>
         <h3 className="center">About SM: </h3>

@@ -25,7 +25,19 @@ class CreateEvent extends React.Component{
     const { auth } = this.props;
     if (!auth.uid) return <Redirect to='/signin' />
     return(
-      <div className="container">
+      <div className="container mas">
+        <style jsx>{`
+            body{
+              background-color: #E0AD14;
+            }
+            .mas{
+              margin-bottom: 55em;
+            }
+            .white{
+              margin-top: 25em;
+            
+            }
+            `}</style>
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">Create New Event</h5>
 

@@ -5,6 +5,7 @@ const EventSummary = ({nextEvent}) => {
   return(
     <div className="card z-depth-0 event-summary center">
       <style jsx>{`
+         
           .event-summary{
             background-color: #E0AD14;
             width: 100%;
@@ -16,7 +17,7 @@ const EventSummary = ({nextEvent}) => {
       <div className="card-content grey-text text-darken-3">
         <span className="card-title">{nextEvent.title}</span>
 
-        <p>Posted by NTF</p>
+        <p>Posted by {nextEvent.authorFirstName} {nextEvent.authorLastName}</p>
         <p className="grey-text text-darken-3">May 20, 2019</p>
       </div>
     </div>
