@@ -3,18 +3,18 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
-const EventDetails = (props) => {
-  const { nextEvent } = props;
-  if (nextEvent) {
+const ReflectionDetails = (props) => {
+  const { reflection } = props;
+  if (reflection) {
     return(
-      <div className="container section event-details">
+      <div className="container section reflection-details">
         <div className="card z-depth-0">
           <div className="card-content">
-            <span className="card-title">{ nextEvent.title }</span>
-            <p>{ nextEvent.content }</p>
+            <span className="card-title">{ reflection.title }</span>
+            <p>{ reflection.content }</p>
           </div>
           <div className="card-action grey lighten-4 grey-text">
-            <div>Posted by {nextEvent.authorFirstName} {nextEvent.authorLastName}</div>
+            <div>Posted by {reflection.authorFirstName} {reflection.authorLastName}</div>
             <div>May 21st, 2019</div>
           </div>
         </div>
@@ -23,7 +23,7 @@ const EventDetails = (props) => {
   } else {
     return(
       <div className="container center">
-        <p>Loading event...</p>
+        <p>Loading reflection...</p>
       </div>
     )
   }
@@ -31,15 +31,15 @@ const EventDetails = (props) => {
 }
 const mapStateToProps = (state, ownProps) => {
   const id = ownProps.match.params.id;
-  const nextEvents = state.firestore.data.nextEvents;
-  const nextEvent = nextEvents ? nextEvents[id] : null
+  const reflections = state.firestore.data.reflections;
+  const reflection = reflections ? reflections[id] : null
   return{
-    nextEvent: nextEvent
+    reflection: reflection
   }
 }
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'nextEvents' }
+    { collection: 'reflections' }
   ])
-)(EventDetails);
+)(ReflectionDetails);

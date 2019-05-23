@@ -1,5 +1,5 @@
 import React from 'react';
-import Notifications from '../Notifications';
+import Reflections from './Reflections';
 import EventList from '../EventList';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
@@ -7,7 +7,7 @@ import { compose } from 'redux';
 
 class Dashboard extends React.Component{
   render(){
-    const { nextEvents, auth } = this.props;
+    const { nextEvents, auth, reflections } = this.props;
 
     return(
       <div className="dashboard container">
@@ -16,7 +16,7 @@ class Dashboard extends React.Component{
             <EventList nextEvents={nextEvents}/>
           </div>
           <div className="col s12 m5 offset-m1">
-            <Notifications/>
+            <Reflections reflections={reflections}/>
           </div>
         </div>
       </div>
@@ -24,15 +24,16 @@ class Dashboard extends React.Component{
   }
 }
 const mapStateToProps = (state) => {
-  console.log(state);
   return {
     nextEvents: state.firestore.ordered.nextEvents,
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    reflections: state.firestore.ordered.reflections
   }
 }
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: 'nextEvents'}
+    { collection: 'nextEvents'},
+    { collection: 'reflections'}
   ])
 )(Dashboard);

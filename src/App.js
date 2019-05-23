@@ -2,7 +2,8 @@ import React from 'react';
 import Navbar from './components/firebase/Navbar';
 import Dashboard from './components/admin/Dashboard';
 import EventDetails from './components/EventDetails';
-import CreateEvent from './components/admin/CreateEvent'
+import CreateEvent from './components/admin/CreateEvent';
+import CreateReflection from './components/admin/CreateReflection';
 import SignIn from './components/firebase/SignIn';
 import SignUp from './components/firebase/SignUp';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
@@ -33,13 +34,14 @@ class App extends React.Component {
                 <Route path='/project/:id' component={EventDetails}/>
                 <Route path='/signin' component={SignIn}/>
                 <Route path='/signup' component={SignUp}/>
-                <Route path='/create' component={CreateEvent}/>
+                <Route path='/createevent' component={CreateEvent}/>
                 <Route path='/uno' component={Seventies}/>
                 <Route path='/dos' component={Tropical}/>
                 <Route path='/tres' component={Sterile}/>
+                <Route path='/createreflection' component={CreateReflection}/>
 
               </Switch>
-              <PieChart/>
+
           </div>
 
         </BrowserRouter>
